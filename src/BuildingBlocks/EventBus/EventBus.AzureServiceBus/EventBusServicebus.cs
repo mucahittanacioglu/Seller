@@ -37,7 +37,7 @@ namespace EventBus.AzureServiceBus
 
             return topicClient;
         }
-        public override void Publish(IntegrationEventHandler @event)
+        public override void Publish(IntegrationEvent @event)
         {
             var eventName = @event.GetType().Name;
             
@@ -133,7 +133,7 @@ namespace EventBus.AzureServiceBus
 
             try
             {
-                var rule = managementClient.GetRuleAsync(EventBusConfig.DefaultTopicName, eventName, eventName).GetAwaiter().GetResult();
+                var rule = managementClient.GetRuleAsync(EventBusConfig.DefaultTopicName, GetSubName(eventName), eventName).GetAwaiter().GetResult();
                 ruleExist = rule != null;
             }
             catch (MessagingEntityNotFoundException)

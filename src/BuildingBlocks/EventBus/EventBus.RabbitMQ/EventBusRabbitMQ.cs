@@ -59,7 +59,7 @@ namespace EventBus.RabbitMQ
                 consumerChannel.Close();
         }
 
-        public override void Publish(IntegrationEventHandler @event)
+        public override void Publish(IntegrationEvent @event)
         {
             if (!persistentConnection.IsConnected)
             {
