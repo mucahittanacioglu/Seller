@@ -46,7 +46,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Api", "src\S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "IdentityService", "{DDF95851-9D32-44E3-81E1-2050710647BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentitySErvice.Api", "src\Services\IdentityService\IdentitySErvice.Api\IdentitySErvice.Api.csproj", "{8740889A-B5E8-441F-A6F2-3065F1148136}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.Api", "src\Services\IdentityService\IdentitySErvice.Api\IdentityService.Api.csproj", "{8740889A-B5E8-441F-A6F2-3065F1148136}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NotificationService", "NotificationService", "{6D1422D3-682E-4399-BD7E-1B1B2322C486}"
 EndProject
@@ -70,7 +70,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5216C989
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{D4F9BF5D-BD46-494F-82B8-955CCEAFE1A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.UnitTests", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTests\EventBus.UnitTests.csproj", "{15F8AF2F-C156-4E27-8E89-1E554197332D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.UnitTests", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTests\EventBus.UnitTests.csproj", "{15F8AF2F-C156-4E27-8E89-1E554197332D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
