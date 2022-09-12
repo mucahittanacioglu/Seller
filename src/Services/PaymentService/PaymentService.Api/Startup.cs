@@ -44,7 +44,7 @@ namespace PaymentService.Api
                 configure.AddDebug();
             });
 
-            //add ecent handler to call handle method from event bus via service collection
+            //add event handler to call handle method from event bus via service collection
             services.AddTransient<OrderStartedIntegrationEventHandler>();
 
             services.AddSingleton<IEventBus>(sp =>
@@ -55,7 +55,7 @@ namespace PaymentService.Api
                     EventNameSuffix = "IntegrationEvent",
                     SubscriberClientAppName = "PaymentService",
                     EventBusType = EventBusType.RabbitMQ,
-                    DefaultTopicName = "PaymentServiceTopic",
+                    //DefaultTopicName = "PaymentServiceTopic",
                    
                     /*
                     Connection = new ConnectionFactory()
