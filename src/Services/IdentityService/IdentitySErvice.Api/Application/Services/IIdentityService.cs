@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdentityServer.Application.Services
+namespace IdentityService.Api.Application.Services
 {
     public interface IIdentityService
     {

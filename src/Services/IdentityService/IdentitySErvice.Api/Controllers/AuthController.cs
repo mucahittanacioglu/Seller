@@ -1,5 +1,5 @@
 ﻿using IdentityServer.Application.Models;
-using IdentityServer.Application.Services;
+using IdentityService.Api.Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

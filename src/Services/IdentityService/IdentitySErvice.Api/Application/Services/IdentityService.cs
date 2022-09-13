@@ -8,7 +8,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdentityServer.Application.Services
+namespace IdentityService.Api.Application.Services
 {
     public class IdentityService : IIdentityService
     {
