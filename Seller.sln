@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C3CC048-411
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05185D8B-C587-4A27-8077-C4CE730EAFA3}"
 	ProjectSection(SolutionItems) = preProject
-		ServiceUrls.txt = ServiceUrls.txt
+		Solution Items\ServiceUrls.txt = Solution Items\ServiceUrls.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{D507FA2A-F7FC-432D-BED1-B0A4143232BF}"
@@ -72,11 +72,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.UnitTests", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTests\EventBus.UnitTests.csproj", "{15F8AF2F-C156-4E27-8E89-1E554197332D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker-compose-file", "docker-compose-file", "{B1D52D6C-8E69-4FB4-8526-F0C98637D0DF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker-compose-file", "docker-compose-file", "{1C9B1C90-B4AE-4CE8-A488-9A39B0EE2CB5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "consul", "consul", "{E563FFEE-37AA-41B4-8CAA-71914EB7C383}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "consul", "consul", "{F4F61F6E-AB0A-4DCD-990F-A6997361D810}"
 	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
+		docker-compose-file\consul\docker-compose.yml = docker-compose-file\consul\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redis", "redis", "{B26FD533-7FEF-4DC2-B7F0-FA742C27376A}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose-file\redis\docker-compose.yml = docker-compose-file\redis\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rabbitmq", "rabbitmq", "{3C0327DD-ED48-4121-A9EE-069B85C407EC}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose-file\rabbitmq\docker-compose.yml = docker-compose-file\rabbitmq\docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sqlserver", "sqlserver", "{53A567E3-3775-4724-8539-093A83483055}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose-file\sqlserver\docker-compose.yml = docker-compose-file\sqlserver\docker-compose.yml
 	EndProjectSection
 EndProject
 Global
@@ -184,7 +199,10 @@ Global
 		{A7B58758-2165-45AC-8F7C-DB7FD03A09E9} = {59BABBD0-342C-486F-912B-DBF61BF885E3}
 		{D4F9BF5D-BD46-494F-82B8-955CCEAFE1A8} = {5216C989-B800-428A-A029-46EDBE22449D}
 		{15F8AF2F-C156-4E27-8E89-1E554197332D} = {D4F9BF5D-BD46-494F-82B8-955CCEAFE1A8}
-		{E563FFEE-37AA-41B4-8CAA-71914EB7C383} = {B1D52D6C-8E69-4FB4-8526-F0C98637D0DF}
+		{F4F61F6E-AB0A-4DCD-990F-A6997361D810} = {1C9B1C90-B4AE-4CE8-A488-9A39B0EE2CB5}
+		{B26FD533-7FEF-4DC2-B7F0-FA742C27376A} = {1C9B1C90-B4AE-4CE8-A488-9A39B0EE2CB5}
+		{3C0327DD-ED48-4121-A9EE-069B85C407EC} = {1C9B1C90-B4AE-4CE8-A488-9A39B0EE2CB5}
+		{53A567E3-3775-4724-8539-093A83483055} = {1C9B1C90-B4AE-4CE8-A488-9A39B0EE2CB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {237DC928-1BAD-4C16-BF56-F6BEE2005F4C}
