@@ -1,9 +1,6 @@
-﻿using MediatR;
-using Microsoft.Extensions.DependencyInjection;
-using OrderService.Application.Features.Commands.CreateOrder;
-using System;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-
+using MediatR;
 
 namespace OrderService.Application
 {
