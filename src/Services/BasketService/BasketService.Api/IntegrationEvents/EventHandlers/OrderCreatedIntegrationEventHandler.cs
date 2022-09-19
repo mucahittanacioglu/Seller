@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BasketService.Api.IntegrationEvents.EventHanders
+namespace BasketService.Api.IntegrationEvents.EventHandlers
 {
     public class OrderCreatedIntegrationEventHandler : IIntegrationEventHandler<OrderCreatedIntegrationEvent>
     {

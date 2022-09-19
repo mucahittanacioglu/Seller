@@ -1,5 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { CatalogItem } from 'src/app/models/CatalogModels/CatalogItem';
+import { BasketService } from 'src/app/services/basket.service';
+import { MapperService } from 'src/app/services/mapper.service';
 
 @Component({
   selector: 'app-catalog-item',
@@ -28,9 +30,15 @@ export class CatalogItemComponent implements OnInit {
     onReorder:false
   };
 
-  constructor() { }
+  constructor(private basketService:BasketService,private mapperService:MapperService) { }
 
   ngOnInit(): void {
   }
-
+  
+  addToCart(ci:CatalogItem){
+    var bi = this.mapperService.mapCatalogItemToBasketItem(ci);
+    this.basketService.addItemToBasket(bi).subscribe(response=>{console.log("Item added")},responseError=>{
+      console.log(responseError)
+    });
+  }
 }

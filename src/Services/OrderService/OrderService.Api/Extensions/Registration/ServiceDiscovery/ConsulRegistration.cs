@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Http.Features;
 
-namespace OrderService.Api.Extensions.Registration.Consul
+namespace OrderService.Api.Extensions.Registration.ServiceDiscovery
 {
     public static class ConsulRegistration
     {
@@ -45,7 +45,8 @@ namespace OrderService.Api.Extensions.Registration.Consul
             consulClient.Agent.ServiceDeregister(registration.ID).Wait();
             consulClient.Agent.ServiceRegister(registration).Wait();
 
-            lifetime.ApplicationStopping.Register(() => {
+            lifetime.ApplicationStopping.Register(() =>
+            {
                 logger.LogInformation("Deregistering from Consul");
                 consulClient.Agent.ServiceDeregister(registration.ID).Wait();
             });

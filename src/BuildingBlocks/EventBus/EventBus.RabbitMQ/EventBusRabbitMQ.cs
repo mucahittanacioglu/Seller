@@ -184,8 +184,9 @@ namespace EventBus.RabbitMQ
             {
                 await ProcessEvent(eventName, message);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
             }
             consumerChannel.BasicAck(eventArgs.DeliveryTag, multiple: false);
         }

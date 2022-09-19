@@ -18,7 +18,7 @@ namespace OrderService.Infrastructure.Context
 
         public OrderDbContext CreateDbContext(string[] args)
         {
-            var connStr = "";
+            var connStr = "Data Source=DESKTOP-JEP3SJM;Database=Seller.OrderServiceDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False\",";
 
             var optionsBuilder = new DbContextOptionsBuilder<OrderDbContext>()
                 .UseSqlServer(connStr);

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using OrderService.Api.IntegrationEvents.EventHandlers;
 
-namespace OrderService.Api.Extensions.Registration
+namespace OrderService.Api.Extensions.Registration.EventHandlerRegistration
 {
     public static class EventHandlerRegistration
     {

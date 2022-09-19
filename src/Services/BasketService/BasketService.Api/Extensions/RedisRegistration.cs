@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BasketService.Api.Extensions.Registration
+namespace BasketService.Api.Extensions
 {
     public static class RedisRegistration
     {

@@ -1,5 +1,5 @@
 
-	<div class="">
+	<!--div class="">
 		<div class="product-image">
 			<a href="#" class="image">
 				<img class="card-img-top" src="http://localhost:5004/{{catalogItem.pictureUri}}"> 
@@ -14,8 +14,25 @@
 			<div class="price">
 				TL {{catalogItem.price}}
 			</div>
-			<a class="add-to-cart" href="javascript:void(0)" onclick="OnClick">
+			<a class="add-to-cart" href="javascript:void(0)" onclick="addtocart(catalogItem)">
 				Add to Cart
 			</a>
 		</div>
+	</div-->
+
+<div class='container-fluid'>
+	<div class="card mx-auto col-md-3 col-10 mt-5">
+		<img class='mx-auto img-thumbnail'
+			src="http://localhost:5004/{{catalogItem.pictureUri}}"
+			width="auto" height="auto"/>
+		<div class="card-body text-center mx-auto">
+			<div class='cvp'>
+				<h5 class="card-title font-weight-bold">{{catalogItem.name}}</h5>
+				<p class="card-text">TL{{catalogItem.price}}</p>
+				<a href="#" class="btn details px-auto">view details</a><br />
+				<button class="btn cart px-auto" (click)="addToCart(catalogItem)">ADD TO CART</button>
+			</div>
+		</div>
 	</div>
+
+</div>

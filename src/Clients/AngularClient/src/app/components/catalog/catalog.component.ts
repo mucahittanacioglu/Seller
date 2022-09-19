@@ -10,7 +10,7 @@ import { CatalogService } from 'src/app/services/catalog.service';
 export class CatalogComponent implements OnInit {
   catalogItems: CatalogItem[] =[];
   constructor(private catalogService:CatalogService) { }
-  testTxt="Hello itworks"
+  
   ngOnInit(): void {
     this.getCatalogItems();
   }

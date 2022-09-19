@@ -1,4 +1,4 @@
-﻿using IdentityServer.Application.Models;
+﻿using IdentityService.Api.Application.Models;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;

@@ -25,6 +25,7 @@ namespace OrderService.Infrastructure.Repositories
         public virtual async Task<T> AddAsync(T entity)
         {
             await dbContext.Set<T>().AddAsync(entity);
+            await dbContext.SaveChangesAsync();
             return entity;
         }
 

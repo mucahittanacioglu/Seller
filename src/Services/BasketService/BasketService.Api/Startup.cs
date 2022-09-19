@@ -1,9 +1,8 @@
 ﻿using BasketService.Api.Core.Application.Repository;
 using BasketService.Api.Core.Application.Services;
 using BasketService.Api.Extensions;
-using BasketService.Api.Extensions.Registration;
 using BasketService.Api.Infrastructure.Repository;
-using BasketService.Api.IntegrationEvents.EventHanders;
+using BasketService.Api.IntegrationEvents.EventHandlers;
 using BasketService.Api.IntegrationEvents.Events;
 using EventBus.Base;
 using EventBus.Base.Abstraction;
@@ -82,9 +81,8 @@ namespace BasketService.Api
 
             services.AddHttpContextAccessor();
 
-            services.AddScoped<IBasketRepository, RedisBasketRepository>();
+            services.AddTransient<IBasketRepository, RedisBasketRepository>();
             services.AddTransient<IIdentityService, IdentityService>();
-
             services.AddSingleton<IEventBus>(sp =>
             {
                 EventBusConfig config = new()
@@ -99,6 +97,7 @@ namespace BasketService.Api
             });
 
             services.AddTransient<OrderCreatedIntegrationEventHandler>();
+
         }
 
         private void ConfigureSubscription(IServiceProvider serviceProvider)

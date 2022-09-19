@@ -11,8 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using OrderService.Api.Extensions.Registration;
-using OrderService.Api.Extensions.Registration.Consul;
+using OrderService.Api.Extensions;
+using OrderService.Api.Extensions.Registration.EventHandlerRegistration;
+using OrderService.Api.Extensions.Registration.ServiceDiscovery;
 using OrderService.Api.IntegrationEvents.EventHandlers;
 using OrderService.Api.IntegrationEvents.Events;
 using OrderService.Application;
@@ -42,7 +43,7 @@ namespace OrderService.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OrderService.Api", Version = "v1" });
             });
-
+            services.ConfigureDbContext(Configuration);
             ConfigureService(services);
             services.AddServiceDiscoveryRegistration(Configuration);
         }

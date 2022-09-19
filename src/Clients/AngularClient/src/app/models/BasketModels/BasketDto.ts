@@ -1,15 +1,15 @@
 export class BasketDto{
-    City:string;  
-    Street:string; 
-    State :string;
-    Country :string;  
-    ZipCode :string; 
-    CardNumber :string; 
-    CardHolderName :string;  
-    CardExpiration:Date;
-    CardSecurityNumber:string;  
-    CardTypeId:number;  
-    Buyer:string;  
+    city:string;  
+    street:string; 
+    state :string;
+    country :string;  
+    zipCode :string; 
+    cardNumber :string; 
+    cardHolderName :string;  
+    cardExpiration:Date;
+    cardSecurityNumber:string;  
+    cardTypeId:number;  
+    buyer:string;  
    
     constructor(City:string,  
         Street:string, 
@@ -23,17 +23,17 @@ export class BasketDto{
         CardTypeId:number,
         Buyer:string){
 
-            this.City = City;
-            this.Street = Street;
-            this.State = State;
-            this.Country = Country;
-            this.ZipCode = ZipCode;
-            this.CardNumber = CardNumber;
-            this.CardHolderName = CardHolderName;
-            this.CardExpiration = CardExpiration;
-            this.CardSecurityNumber = CardSecurityNumber;
-            this.CardTypeId = CardTypeId;
-            this.Buyer = Buyer;
+            this.city = City;
+            this.street = Street;
+            this.state = State;
+            this.country = Country;
+            this.zipCode = ZipCode;
+            this.cardNumber = CardNumber;
+            this.cardHolderName = CardHolderName;
+            this.cardExpiration = CardExpiration;
+            this.cardSecurityNumber = CardSecurityNumber;
+            this.cardTypeId = CardTypeId;
+            this.buyer = Buyer;
 
 
     }
