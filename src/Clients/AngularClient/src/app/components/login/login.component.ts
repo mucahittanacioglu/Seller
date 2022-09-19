@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit {
       let loginModel = Object.assign({},this.loginForm.value)
 
       this.authService.login(loginModel).subscribe(response=>{
-        localStorage.setItem("token",response.userToken)
+        localStorage.setItem("token",response.userToken);
+        localStorage.setItem("username",response.userName);
       },responseError=>{
         console.log(responseError)
       })

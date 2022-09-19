@@ -8,6 +8,7 @@ import { CatalogComponent } from './components/catalog/catalog.component';
 import { CatalogItemComponent } from './components/catalog-item/catalog-item.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BasketComponent } from './components/basket/basket.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     CatalogComponent,
     CatalogItemComponent,
-    LoginComponent
+    LoginComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,

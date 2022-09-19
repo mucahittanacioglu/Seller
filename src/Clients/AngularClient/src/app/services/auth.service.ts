@@ -14,4 +14,10 @@ export class AuthService {
   login(loginModel:UserLoginRequest): Observable<UserLoginResponse>{
     return this.httpClient.post<UserLoginResponse>(this.apiUrl,loginModel)
   }
+  getToken(){
+    return localStorage.getItem("token");
+  }
+  getUsername(){
+    return localStorage.getItem("username");
+  }
 }
