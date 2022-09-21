@@ -1,10 +1,4 @@
-import { OrderItem } from "./OrderItem";
-
 export class Order{
-    OrderNumber!: string;
-    Date!:Date;
-    Status!:string;
-    Description!:string;
     City!:string;
     Street!:string;
     State!:string;
@@ -17,5 +11,4 @@ export class Order{
     CardSecurityNumber!:string;
     CardTypeId!:number;
     Buyer!:string;
-    OrderItems!:OrderItem[];
 }

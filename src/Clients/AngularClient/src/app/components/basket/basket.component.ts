@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Basket } from 'src/app/models/BasketModels/Basket';
 import { BasketDto } from 'src/app/models/BasketModels/BasketDto';
 import { BasketService } from 'src/app/services/basket.service';
@@ -10,20 +10,27 @@ import { MapperService } from 'src/app/services/mapper.service';
   styleUrls: ['./basket.component.css']
 })
 export class BasketComponent implements OnInit {
+ 
   basket:Basket = {
     items: [],
     buyerId: "",
     total:0
     }
   constructor(private basketService:BasketService,private mapperService:MapperService) { }
+  
+  isCheckout=false;
 
   ngOnInit(): void {
     this.basketService.getBasket().subscribe(response=>{
       this.basket = this.mapperService.mapBasketView(response);
+    },responseError => {
+      console.log(responseError);
     });  }
   
-  checkout(){
-      this.basketService.checkout(this.getMockCheckout()).subscribe(response=>{
+    /*
+  checkout(basketDto:BasketDto){
+    console.log("test");
+      this.basketService.checkout(basketDto).subscribe(response=>{
         console.log("Checkout success!")
       },responseError=>{
         console.log(responseError)
@@ -47,5 +54,6 @@ export class BasketComponent implements OnInit {
       username,
     )
   }
+  */
 
 }

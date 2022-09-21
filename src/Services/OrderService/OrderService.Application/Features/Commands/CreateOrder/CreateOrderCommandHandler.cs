@@ -32,7 +32,7 @@ namespace OrderService.Application.Features.Commands.CreateOrder
             }
 
             await orderRepository.AddAsync(dbOrder);
-            //await orderRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
+            await orderRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
 
             var orderStartedIntegrationEvent = new OrderStartedIntegrationEvent(request.UserName);
 

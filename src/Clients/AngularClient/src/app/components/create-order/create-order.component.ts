@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { BasketDto } from 'src/app/models/BasketModels/BasketDto';
 import { Order } from 'src/app/models/OrderModel/Order';
+import { BasketService } from 'src/app/services/basket.service';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-create-order',
@@ -8,40 +10,46 @@ import { Order } from 'src/app/models/OrderModel/Order';
   styleUrls: ['./create-order.component.css']
 })
 export class CreateOrderComponent implements OnInit {
-  orderForm:FormGroup;
+  
+  
+  
+  
+
   order:Order= {
     CardExpirationShort: "04/23",
-    CardHolderName: "Mücahit",
-    CardNumber: "1234123412341234",
+    CardHolderName: "Mücahit Tanacioglu",
+    CardNumber: "0000-0000-0000-0000",
     CardSecurityNumber: "123",
     CardTypeId: 1,
     City: "İstanbul",
-    Description: "Test Desc",
-    Street: "Test Street",
+    Street: "Kadir sokak",
     Country: "Turkey",
-    OrderNumber: '',
-    Date: new Date(Date.now()),
-    Status: '',
-    State: '',
-    ZipCode: '',
-    CardExpiration:new Date(2023, 4, 4, 17, 23, 42, 11),
-    Buyer: '',
-    OrderItems: []
+    State: 'Istanbul',
+    ZipCode: '33840',
+    CardExpiration: new Date(2023, 4, 4, 17, 23, 42, 11),
+    Buyer: "",
   }
-  constructor(private formBuilder:FormBuilder) { 
-    this.orderForm=this.createOrderForm();
+  constructor(private orderService:OrderService, private basketService:BasketService) { 
+   
   }
 
   ngOnInit(): void {
   }
-  createOrderForm(){
-    return this.formBuilder.group({
-      email: ["",Validators.required],
-      password:["",Validators.required]
-    })
-  }
+ 
   createOrder(){
+  
+  var username="";
+  username +=  localStorage.getItem("username");
+  this.order.Buyer = username;
 
+  var basketDto = this.orderService.mapOrderToBasketDto(this.order);
+
+  this.basketService.checkout(basketDto).subscribe(response=>{
+    console.log("Checkout success!");
+    
+  },responseError=>{
+    console.log(responseError)
+  });
   }
   
 }

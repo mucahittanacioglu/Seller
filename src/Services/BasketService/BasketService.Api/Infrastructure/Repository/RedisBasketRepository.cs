@@ -44,6 +44,23 @@ namespace BasketService.Api.Infrastructure.Repository
             {
                 return null;
             }
+            // repeated item conversion
+            
+            /*
+             * var basket = JsonConvert.DeserializeObject<CustomerBasket>(data);
+            
+            var items = new List<BasketItem>();
+            foreach(var item in basket.Items)
+            {
+                if (items.Contains(item))
+                {
+                    items.Find(i => i.Id == item.Id).Quantity+=1;
+                }
+            }
+            basket.Items = items;
+
+            */
+
 
             return JsonConvert.DeserializeObject<CustomerBasket>(data);
         }

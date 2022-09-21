@@ -1,16 +1,93 @@
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-11">
+			<div class="card card0 rounded-0">
+				<div class="row">
+					<div class="col-md-5 d-md-block d-none p-0 box">
+						<div class="card rounded-0 border-0 card1">
+							<h3 id="heading1">Shipping Adress Details</h3>
+							<div class="row">
+								<div class="col-md-5 col-8 mt-4 line pl-4">
+									<h2 class="bill-head">City</h2>									
+								</div>
+								<div class="col-lg-5 col-4 mt-4">
+                  					<input [(ngModel)]="order.City" class="adress-input" type="text" >
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-8 mt-4 line pl-4">
+									<h2 class="bill-head">Street</h2>									
+								</div>
+								<div class="col-lg-5 col-4 mt-4">
+									<input class="adress-input" type="text"  [(ngModel)]="order.Street">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-8 mt-4 line pl-4">
+									<h2 class="bill-head">State</h2>						
+								</div>
+								<div class="col-lg-5 col-4 mt-4">
+									<input class="adress-input" type="text"  [(ngModel)]="order.State">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-8 mt-4 line pl-4">
+									<h2 class="bill-head">Country</h2>
+								</div>
+								<div class="col-lg-5 col-4 mt-4">
+									<input class="adress-input" type="text"  [(ngModel)]="order.Country">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-8 mt-4 line pl-4">
+									<h2 class="bill-head">Zip Code</h2>
+								</div>
+								<div class="col-lg-5 col-4 mt-4">
+									<input class="adress-input" type="text"  [(ngModel)]="order.ZipCode">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-5 col-sm-12 p-0 box">
+						<div class="card rounded-0 border-0 card2" id="paypage">
+							<div class="form-card">
+			                    <h2 id="heading2" class="text-danger">Payment Method</h2>
+			                    <div class="radio-group">
+			                        <div class='radio' data-value="credit"><img src="https://i.imgur.com/28akQFX.jpg" width="200px" height="60px"></div>
+			                        <div class='radio' data-value="paypal"><img src="https://i.imgur.com/5QFsx7K.jpg" width="200px" height="60px"></div>
+			                        <br>
+			                    </div>
+			                    <label class="pay">Name on Card</label>
+			                    <input type="text" name="holdername" [(ngModel)]="order.CardHolderName">
+			                    <div class="row">
+			                        <div class="col-8 col-md-6">
+			                            <label class="pay">Card Number</label>
+			                            <input type="text" name="cardno" id="cr_no" [(ngModel)]="order.CardNumber" minlength="19" maxlength="19">
+			                        </div>
+			                        <div class="col-4 col-md-6">
+			                            <label class="pay">CVV</label>
+			                            <input type="password" name="cvcpwd" [(ngModel)]="order.CardSecurityNumber" class="placeicon" minlength="3" maxlength="3">
+			                        </div>
+			                    </div>
+			                    <div class="row">
+			                        <div class="col-md-12">
+			                            <label class="pay">Expiration Date</label>
+			                        </div>
+			                        <div class="col-md-12">
+			                            <input type="text" name="exp" id="exp"  [(ngModel)]="order.CardExpirationShort" minlength="5" maxlength="5">
+			                        </div>
+			                    </div>
+			                    <div class="row">
+			                        <div class="col-md-6">
+			                            <input type="submit" (click) ="createOrder()" value="MAKE A PAYMENT &nbsp; &#xf178;" class="btn btn-info placeicon">
+			                        </div>
+			                    </div>
+			                </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

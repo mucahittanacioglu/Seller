@@ -16,8 +16,6 @@ namespace OrderService.Domain.AggregateModels.OrderAggregate
 
         public int Quantity { get; private set; }
 
-        public string Description { get; private set; }
-
         public Guid? BuyerId { get; private set; }
 
         public Buyer Buyer { get; private set; }

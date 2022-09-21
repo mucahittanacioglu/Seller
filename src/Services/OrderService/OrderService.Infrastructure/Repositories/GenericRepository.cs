@@ -20,12 +20,11 @@ namespace OrderService.Infrastructure.Repositories
             this.dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
 
-        public IUnitOfWork UnitOfWork { get; }
+        public IUnitOfWork UnitOfWork => dbContext;
 
         public virtual async Task<T> AddAsync(T entity)
         {
             await dbContext.Set<T>().AddAsync(entity);
-            await dbContext.SaveChangesAsync();
             return entity;
         }
 

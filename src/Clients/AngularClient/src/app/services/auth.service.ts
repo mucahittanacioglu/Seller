@@ -20,4 +20,8 @@ export class AuthService {
   getUsername(){
     return localStorage.getItem("username");
   }
+  logout(){
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+  }
 }

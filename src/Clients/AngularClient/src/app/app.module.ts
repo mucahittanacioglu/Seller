@@ -12,11 +12,13 @@ import { BasketComponent } from './components/basket/basket.component';
 import { CreateOrderComponent } from './components/create-order/create-order.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { RouterModule, Routes } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 const appRoutes: Routes = [
-  {path:'',component:LoginComponent},
+  {path:'login',component:LoginComponent},
   {path:'tobasket',component:BasketComponent},
-  {path:'catalogs',component:CatalogComponent}
+  {path:'catalogs',component:CatalogComponent},
+  {path:'createorder',component:CreateOrderComponent}
 ]
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     CatalogItemComponent,
     LoginComponent,
     BasketComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
